@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Scheduler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label, input {
+            margin: 5px 0;
+        }
+        button {
+            margin: 10px 5px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        h2 {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Course Scheduler</h1>
+    <form id="course-form">
+        <div id="course-container">
+            <label for="course-number-1">Enter Course Number:</label>
+            <input type="text" id="course-number-1" name="course-number" required>
+        </div>
+        <button type="button" onclick="addCourseField()">+ Add Course</button>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
